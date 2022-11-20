@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+::-webkit-input-placeholder {
+  /* The input and its placeholder must have matching font styles; for manupulating placeholder fonts*/
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+:-ms-input-placeholder {
+  /* The input and its placeholder must have matching font styles; for manupulating placeholder fonts*/
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+::-ms-input-placeholder {
+  /* The input and its placeholder must have matching font styles; for manupulating placeholder fonts*/
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+::placeholder {
+  /* The input and its placeholder must have matching font styles; for manupulating placeholder fonts*/
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.better-form__container {
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f4f4f4;
+}
+
+.better-form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.better-form__group:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.better-form__input {
+  height: 50px;
+  width: 250px;
+  padding: 15px;
+  border: none;
+  /* border-bottom: 2px solid transparent; */
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 18px;
+  font: inherit;
+  /* this makes placeholder disapper upon foucs */
+}
+
+.better-form__input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.better-form__input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.better-form__input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.better-form__input:focus::placeholder {
+  color: transparent;
+}
+
+.better-form__input:focus {
+  outline: none;
+  /* border-bottom: 2px solid black; */
+}
+
+.better-form__input:focus ~ .better-form__label {
+  z-index: 0;
+  opacity: 1;
+  -webkit-transform: translateX(6px) translateY(-68px);
+          transform: translateX(6px) translateY(-68px);
+}
+
+.better-form__input:focus ~ .better-form__border {
+  width: 250px;
+}
+
+.better-form__label {
+  display: inline-block;
+  font-size: 14px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: translateX(6px) translateY(-20px);
+          transform: translateX(6px) translateY(-20px);
+}
+
+.better-form__border {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #31af4c;
+}

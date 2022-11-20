@@ -1,0 +1,34 @@
+// html {
+//   font-size: 62.5%;
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px
+
+  @include respondMax(tab-land) {
+    font-size: 56.25%; //1rem = 9px
+  }
+
+  @include respondMax(tab-port) {
+    font-size: 50%; //1rem = 8px
+  }
+
+  @include respondMin(big-desktop) {
+    font-size: 75%; //1rem = 12px
+  }
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+// // adding media queries
+// @include respond(992px) {
+//     //codes to happen
+// }

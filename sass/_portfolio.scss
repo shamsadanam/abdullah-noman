@@ -1,0 +1,125 @@
+.port {
+  margin-left: 6rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  max-width: 90%;
+  margin: auto;
+
+  //   @include respondMax(767px) {
+  //     max-width: 90%;
+  //   }
+  @include respondMax(575px) {
+    padding: 8rem 0;
+    margin-left: 4rem;
+  }
+  //   &__container {
+  //     // max-width: 90vw;
+  //     // max-width: 90%;
+  //   }
+  &__header {
+    font-family: NSC;
+    font-size: 4rem;
+    @include respondMax(575px) {
+      text-align: center;
+    }
+  }
+  &__text {
+    font-family: Lato Regular;
+    font-size: 1.8rem;
+    color: $color-light-3;
+    // text-align: justify;
+    @include respondMax(575px) {
+      text-align: center;
+      //   width: 80%;
+      //   margin: auto;
+    }
+  }
+
+  &__img-container {
+    @include respondMax(767px) {
+      &--2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+
+        &:not(:first-child) {
+          padding-left: 1.5rem;
+          margin-top: -30.5rem;
+        }
+
+        &:not(:last-child) {
+          padding-right: 1.5rem;
+        }
+      }
+    }
+
+    @include respondMax(575px) {
+      margin: auto;
+
+      &--2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 1.5rem;
+
+        @include respondMax(575px) {
+          margin-top: 0rem;
+
+          &:not(:first-child) {
+            padding-left: 0rem;
+            margin-top: 0rem;
+          }
+
+          &:not(:last-child) {
+            padding-right: 0rem;
+          }
+
+          @include respondMax(575px) {
+            margin-bottom: 2.5rem;
+          }
+        }
+        // padding: 0 3rem;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    @include respondMax(767px) {
+      margin-bottom: 2.5rem;
+    }
+    @include respondMax(575px) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  & .img-fluid {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+  }
+
+  & [class^="col"] {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .u-flex-12 {
+    padding-right: 1.5rem;
+  }
+
+  @include respondMin(768px) {
+    .u-mt-5 {
+      margin-top: 5rem;
+    }
+  }
+
+  @include respondMax(575px) {
+    .u-px-6 {
+      padding: 0 4rem;
+    }
+  }
+  //   @include respondMin(576px) {
+  //     .u-px-6 {
+  //       padding: 0 0.5rem;
+  //     }
+  //   }
+}

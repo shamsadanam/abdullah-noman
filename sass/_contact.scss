@@ -1,0 +1,47 @@
+.contact {
+  margin-bottom: 10rem;
+
+  &__heading {
+    font-family: NSC;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  &__text {
+    font-family: Lato Regular;
+    font-size: 1.8rem;
+    color: $color-light-1;
+  }
+  &__form {
+    & input,
+    textarea {
+      font-size: 2rem;
+      font-family: NSC;
+      color: #000;
+    }
+    textarea.form-control {
+      margin-top: 4rem;
+      @include respondMax(767px) {
+        margin-top: 6rem;
+      }
+      border: 2px solid $color-light-2;
+      resize: none;
+      &:focus ~ .better-form__label {
+        top: -20px;
+      }
+    }
+    & .form-control {
+      border: none;
+      border-bottom: 2px solid $color-light-2;
+    }
+    & .form-control:focus,
+    textarea.form-control:focus {
+      color: #000;
+      border-color: #000;
+    }
+    & .form-control::placeholder {
+      font-size: 2rem;
+      font-family: NSC;
+      color: $color-light-1;
+    }
+  }
+}
